@@ -1,0 +1,109 @@
+/* === ThinkBit Edge - style.css === */
+
+:root {
+    --primary-color: #005f73; /* Teal Blue */
+    --secondary-color: #e9f5f9; /* Very Light Blue */
+    --accent-color: #ee9b00; /* Orange/Gold Accent */
+    --text-color: #333;
+    --heading-color: #003440; /* Darker Teal Blue */
+    --light-text-color: #ffffff;
+    --background-color: #ffffff;
+    --font-main: 'Inter', sans-serif;
+    --container-width: 980px;
+    --header-height: 70px;
+    --border-radius: 4px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.65;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+main { flex-grow: 1; padding-top: var(--header-height); }
+.container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; }
+
+h1, h2, h3, h4 { color: var(--heading-color); margin-bottom: 1rem; line-height: 1.3; font-weight: 700; }
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; margin-top: 2rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid #eee; }
+h3 { font-size: 1.4rem; margin-top: 1.5rem; margin-bottom: 0.8rem; font-weight: 600; color: var(--primary-color); }
+p { margin-bottom: 1.2rem; }
+a { color: var(--primary-color); text-decoration: none; font-weight: 600; transition: color 0.3s ease; }
+a:hover, a:focus { color: var(--accent-color); text-decoration: underline; }
+ul { list-style: none; padding-left: 0; }
+ul li { margin-bottom: 0.7rem; }
+
+/* --- Header --- */
+.site-header { background-color: var(--light-text-color); position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; height: var(--header-height); box-shadow: 0 1px 5px rgba(0,0,0,0.1); border-bottom: 1px solid #eee; }
+.header-content { display: flex; justify-content: space-between; align-items: center; height: 100%; }
+.logo a { font-size: 1.5rem; font-weight: 700; color: var(--heading-color); text-decoration: none; }
+.logo a:hover { color: var(--primary-color); }
+.main-nav ul { display: flex; gap: 25px; }
+.main-nav a { color: var(--text-color); padding: 5px 10px; text-decoration: none; font-weight: 600; border-bottom: 2px solid transparent; transition: border-color 0.3s ease, color 0.3s ease; }
+.main-nav a:hover, .main-nav a:focus, .main-nav a.active { color: var(--primary-color); border-bottom-color: var(--accent-color); text-decoration: none; }
+.mobile-nav-toggle { display: none; background: none; border: none; color: var(--heading-color); font-size: 1.8rem; cursor: pointer; }
+
+/* --- Hero Section (Homepage) --- */
+.hero-section-thinkbit { background-color: var(--primary-color); color: var(--light-text-color); padding: 80px 0; text-align: center; }
+.hero-section-thinkbit h1 { color: var(--light-text-color); font-size: 3rem; margin-bottom: 1rem; }
+.hero-section-thinkbit .subtitle { font-size: 1.2rem; color: var(--secondary-color); max-width: 650px; margin: 0 auto 2rem auto; }
+
+/* --- Buttons --- */
+.cta-button { display: inline-block; padding: 10px 25px; border-radius: var(--border-radius); text-decoration: none; font-weight: 600; transition: all 0.3s ease; margin: 5px; border: 2px solid transparent; font-size: 1rem; }
+.cta-button.primary { background-color: var(--accent-color); color: var(--heading-color); border-color: var(--accent-color); }
+.cta-button.primary:hover { background-color: #fca311; border-color: #fca311; /* Darker orange */ }
+.cta-button.secondary { background-color: transparent; color: var(--primary-color); border-color: var(--primary-color); }
+.cta-button.secondary:hover { background-color: var(--primary-color); color: var(--light-text-color); }
+.cta-center { text-align: center; margin-top: 2rem; }
+
+/* --- Homepage Sections --- */
+.intro-section, .why-learn-section { padding-top: 50px; padding-bottom: 50px; }
+.intro-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 2rem; }
+.intro-columns h3 { font-size: 1.2rem; margin-top: 0.8rem; }
+.intro-icon { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem; }
+.why-learn-section ul { list-style: none; padding: 0; margin-top: 1rem; }
+.why-learn-section li { margin-bottom: 0.8rem; display: flex; align-items: center; font-size: 1.05rem; }
+.why-learn-section i { color: var(--primary-color); margin-right: 10px; font-size: 1.2rem; }
+
+/* --- Learn Page Sections --- */
+.concept-box, .path-box { background-color: var(--secondary-color); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: var(--border-radius); border-left: 4px solid var(--accent-color); }
+.concept-box h3, .path-box h3 { margin-top: 0; margin-bottom: 0.5rem; font-size: 1.3rem; }
+.path-box a { display: block; margin-top: 1rem; font-weight: 700; }
+
+/* --- Resources Page Sections --- */
+#free-courses ul, #tools-explore ul, #articles-explainers ul { list-style: disc; margin-left: 20px; }
+
+/* --- About Page Sections --- */
+#mission p { font-size: 1.05rem; line-height: 1.8; }
+
+/* --- Footer --- */
+.site-footer { background-color: var(--heading-color); color: var(--secondary-color); padding: 25px 0; text-align: center; margin-top: auto; font-size: 0.9rem; }
+.site-footer p { margin-bottom: 0; }
+
+/* --- Page Header (General) --- */
+.page-header { background-color: var(--secondary-color); padding: 40px 0; text-align: center; margin-bottom: 40px; border-bottom: 1px solid #ddd; }
+.page-header h1 { margin-bottom: 0.5rem; }
+.page-header p { color: var(--text-color); font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    .hero-section-thinkbit h1 { font-size: 2.5rem; }
+    .main-nav { display: none; position: absolute; top: var(--header-height); left: 0; right: 0; background-color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .main-nav.active { display: block; }
+    .main-nav ul { flex-direction: column; gap: 0; padding: 10px 0; }
+    .main-nav li { text-align: center; }
+    .main-nav a { display: block; padding: 10px 20px; border-bottom: 1px solid #eee; }
+    .main-nav a:hover, .main-nav a:focus, .main-nav a.active { border-bottom-color: var(--accent-color); }
+    .mobile-nav-toggle { display: block; }
+}
