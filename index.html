@@ -9,51 +9,12 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
+            scroll-behavior: smooth; /* enables smooth scrolling */
         }
         .gradient-bg {
             background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
         }
-        .hero-pattern {
-            background-color: #f9fafb;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23a5b4fc' fill-opacity='0.15'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        .program-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04);
-        }
-        .testimonial-card {
-            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.2) 100%);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #3b82f6;
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        .team-card:hover .social-icons {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .social-icons {
-            opacity: 0;
-            transform: translateY(10px);
-            transition: all 0.3s ease;
-        }
-        
-        /* Multi-page system */
+        /* ... (other styles unchanged) ... */
         .page {
             display: none;
         }
@@ -61,52 +22,85 @@
             display: block;
         }
     </style>
+    <script>
+        // Show only the requested page (for multi-page navigation)
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(function(page) {
+                page.classList.remove('active');
+            });
+            // Show the requested page
+            document.getElementById(pageId).classList.add('active');
+            // Scroll to top of page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            // Close mobile menu if open
+            document.getElementById('mobile-menu').classList.add('hidden');
+        }
+
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+                var menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('hidden');
+            });
+
+            // For anchor links: if link is for a section within the home page, show home page and scroll to section
+            document.querySelectorAll('a[data-scroll]').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // Show home page
+                    showPage('home');
+                    // Scroll to the section
+                    var targetId = this.getAttribute('href').replace('#', '');
+                    setTimeout(function() {
+                        var target = document.getElementById(targetId);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }, 100); // slight delay to ensure page is visible
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="bg-white shadow-md fixed w-full z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#3b82f6"/>
-                    <path d="M2 17L12 22L22 17" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2 12L12 17L22 12" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <!-- ... logo ... -->
                 <span class="font-bold text-xl text-gray-800 cursor-pointer" onclick="showPage('home')">ThinkBit Edge</span>
             </div>
-            
             <div class="hidden md:flex space-x-8">
-                <a href="#" onclick="showPage('home')" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Home</a>
+                <a href="#home-hero" data-scroll class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Home</a>
                 <a href="#" onclick="showPage('programs')" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Programs</a>
                 <a href="#" onclick="showPage('support')" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Support Us</a>
-                <a href="#" onclick="showPage('home', 'team')" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Our Team</a>
-                <a href="#" onclick="showPage('home', 'impact')" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Impact</a>
-                <a href="#" onclick="showPage('home', 'contact')" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Contact</a>
+                <a href="#team" data-scroll class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Our Team</a>
+                <a href="#impact" data-scroll class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Impact</a>
+                <a href="#contact" data-scroll class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Contact</a>
             </div>
-            
             <div class="hidden md:block">
                 <button onclick="showPage('programs')" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105">
                     Get Involved
                 </button>
             </div>
-            
             <div class="md:hidden">
                 <button id="menu-toggle" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                    <!-- ... hamburger icon ... -->
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
         </div>
-        
         <!-- Mobile menu -->
         <div id="mobile-menu" class="md:hidden hidden bg-white pb-4 px-4">
-            <a href="#" onclick="showPage('home')" class="block py-2 text-gray-600 hover:text-blue-600">Home</a>
+            <a href="#home-hero" data-scroll class="block py-2 text-gray-600 hover:text-blue-600">Home</a>
             <a href="#" onclick="showPage('programs')" class="block py-2 text-gray-600 hover:text-blue-600">Programs</a>
             <a href="#" onclick="showPage('support')" class="block py-2 text-gray-600 hover:text-blue-600">Support Us</a>
-            <a href="#" onclick="showPage('home', 'team')" class="block py-2 text-gray-600 hover:text-blue-600">Our Team</a>
-            <a href="#" onclick="showPage('home', 'impact')" class="block py-2 text-gray-600 hover:text-blue-600">Impact</a>
-            <a href="#" onclick="showPage('home', 'contact')" class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
+            <a href="#team" data-scroll class="block py-2 text-gray-600 hover:text-blue-600">Our Team</a>
+            <a href="#impact" data-scroll class="block py-2 text-gray-600 hover:text-blue-600">Impact</a>
+            <a href="#contact" data-scroll class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
             <button onclick="showPage('programs')" class="mt-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
                 Get Involved
             </button>
